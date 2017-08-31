@@ -1,0 +1,60 @@
+
+<!doctype html>
+<html>
+<head>
+    <title>Example Domain</title>
+
+    <meta charset="utf-8" />
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <style type="text/css">
+
+        #shadows #container{
+            width: 600px;
+            margin: 40px auto;
+            padding: 20px;
+            box-sizing: border-box;
+            background: yellow;
+            box-shadow: -10px 20px 10px -10px black;
+        }
+        #shadows h1{
+            color: white;
+            text-shadow: 0 2px 5px blue,2px 2px 5px red;
+        }
+        #three-columns{
+            /*分欄moz&webkit是用來相容於其他瀏覽器*/
+            -webkit-column-count: 3;
+            -moz-column-count: 3;
+            column-count: 3;
+
+            /*gap間隔*/
+            column-gap: 40px;
+            -moz-column-gap: 40px;
+            -webkit-column-gap: 40px;
+
+            /*隔線可用dashed等等樣式*/
+            column-rule-style: solid ;
+            -moz-column-rule-style: solid;
+            -webkit-column-rule-style: solid;
+
+            /*隔線粗度*/
+            column-rule-width: 1px;
+            -moz-column-rule-width: 1px;
+            -webkit-column-rule-style: 1px;
+
+            /*隔線顏色*/
+            column-rule-color: red;
+            -moz-column-rule-color: red;
+            -webkit-column-rule-color: red;
+
+        }
+    </style>    
+</head>
+
+<body id="shadows">
+    <div id="container">
+        <h1>CSS3 columns</h1>
+        <p id="three-columns">this some text.this some text.this some text.this some text.this some text.this some text.this some text.this some text.this some text.this some text.this some text.this some text.this some text.this some text.this some text.this some text.this some text.this some text.this some text.this some text.this some text.this some text.this some text.this some text.this some text.this some text.this some text.this some text.this some text.this some text.this some text.this some text.this some text.this some text.this some text.this some text.this some text.this some text.this some text.this some text.this some textthis some text.this some text.this some text.this some text.this some text.this some text.this some text.this some text..</p>
+    </div>
+</body>
+</html>

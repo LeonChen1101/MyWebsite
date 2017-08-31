@@ -1,0 +1,36 @@
+<!doctype html>
+<html>
+
+<head>
+    <title>Learing Javascript</title>
+
+    <meta charset="utf-8" />
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+
+</head>
+
+<body>
+
+    <p>How many fingers am I hoding up?</p>
+    <input id="answer" />
+    <button id="mybutton">Submit</button>
+
+    <script type="text/javascript">
+        document.getElementById("mybutton").onclick = function () {
+            var ans = document.getElementById("answer").value;
+            var x = Math.random() * 100;
+            x = x * 100;
+            x = Math.floor(x);
+            x = x % 6;
+            if (ans == x) {
+                alert("yes,answer is " + x);
+            } else {
+                alert("Guessed wrong,corrent number is " + x);
+            }
+        }
+    </script>
+</body>
+
+</html>

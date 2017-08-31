@@ -1,0 +1,32 @@
+<!doctype html>
+<html>
+
+<head>
+    <title>Learing Javascript</title>
+
+    <meta charset="utf-8" />
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+
+</head>
+
+<body>
+
+    <p>What is weather?</p>
+    <input id="weather" />
+    <button id="mybutton">Submit</button>
+
+    <script type="text/javascript">
+        document.getElementById("mybutton").onclick = function () {
+            var x = document.getElementById("weather").value;
+            if (x == "rain") {
+                alert("Yes");
+            } else {
+                alert("no");
+            }
+        }
+    </script>
+</body>
+
+</html>

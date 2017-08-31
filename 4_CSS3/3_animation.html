@@ -1,0 +1,89 @@
+
+<!doctype html>
+<html>
+<head>
+    <title>Example Domain</title>
+
+    <meta charset="utf-8" />
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <style type="text/css">
+
+        #shadows #container{
+            width: 600px;
+            margin: 40px auto;
+            padding: 20px;
+            box-sizing: border-box;
+            background: yellow;
+            box-shadow: -10px 20px 10px -10px black;
+        }
+        #shadows h1{
+            color: white;
+            text-shadow: 0 2px 5px blue,2px 2px 5px red;
+        }
+        #box{
+            background: pink;
+            width: 200px;
+            height: 200px;
+            margin: 40px auto;
+            padding: 50px;
+            box-sizing: border-box;
+            border-radius: 50px;
+            color: white;
+            font-size: 150%;
+            
+        }
+        @keyframes box{
+            from/*also can be 0%*/ {
+                background-color: red;
+                border-radius: 40px;
+                top: 0px; /*移動初始位置*/
+                left: 0px;
+            }
+            to/*also can be 0~100%*/ {
+                background-color: black;
+                border-radius: 100px;
+                top: 100px;
+                left: 100px;
+            }
+        }
+        #box {
+            position: relative;/*相對位置*/
+            animation-name: box;
+            animation-duration: 1s;/*動畫時間*/
+            animation-timing-function: ease-in-out;/*時間函數*/
+            animation-delay: 1s;/*1s後開始動畫*/
+            animation-iteration-count: 4;/*播放次數*/
+            animation-direction: alternate;/*reverse:反向播放 alternate:正反播放*/
+
+            /*此行為上面animation簡化版*/
+            animation: box 1s ease-in-out 1s 4 alternate;
+        }
+
+        #box2 {
+            background: blue;
+            width: 200px;
+            height: 200px;
+            color: white;
+        }
+        #box2:hover/*鼠標觸擊時的反應*/ {
+            background: red;
+            width: 300px;
+            height: 300px;
+            transition: all 4s;/*所有動作在4S完成*/
+            transition-timing-function: ease-in;/*由慢到快*/
+
+            /*可簡化為*/
+            transition: width 2s, height 8s, background 15s;
+        }
+    </style>    
+</head>
+
+<body id="shadows">
+    <div id="container">
+        <h1>CSS3 Animations &amp; Transitions</h1>
+        <div id="box">Animation Box!</div>
+        <div id="box2">Transition Box!</div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,42 @@
+<!doctype html>
+<html>
+
+<head>
+    <title>Learing Javascript</title>
+
+    <meta charset="utf-8" />
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+
+</head>
+
+<body>
+    <button id="changer">Change the text</button>
+    <div id="mytext">This is some text</div>
+    <script type="text/javascript">
+        var myArray = new Array();
+        myArray[0] = "pizza";
+        myArray[1] = "cola";
+
+        /*不用var直接叫出Array*/
+        myOtherArray = ["rain", "sun", "night"];
+        /*新增Array元素--尾遞補*/
+        myOtherArray.push("snow", "cloud");
+        /*splice->強大的功能
+        可以刪除Array元素,亦可以指定要刪除之元素
+        也可以添加(多個)元素*/
+        myOtherArray.splice(1, 2);/*(從Array[n]開始,刪除元素量)*/
+        myOtherArray.splice(1, 0, "Hail");/*在元素Array[1]前添加元素Hail*/
+        /*可在chrome上按檢查找到console*/
+        console.log(myOtherArray);/*列出元素*/
+        console.log(myOtherArray.length);/*Array元素量(長度)*/
+
+
+        document.getElementById("changer").onclick = function () {
+            document.getElementById("mytext").innerHTML = myArray[0];
+        }
+    </script>
+</body>
+
+</html>

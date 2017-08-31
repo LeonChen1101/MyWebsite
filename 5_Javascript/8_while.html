@@ -1,0 +1,40 @@
+<!doctype html>
+<html>
+
+<head>
+    <title>Learing Javascript</title>
+
+    <meta charset="utf-8" />
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+
+</head>
+
+<body>
+
+    <p>How many fingers? 2.0</p>
+    <input id="myinput" />
+    <button id="guess">Guess</button>
+    <script type="text/javascript">
+        document.getElementById("guess").onclick = function () {
+            var gotit = false;
+            var guesstimes = 0;
+            while (gotit == false) {
+                var x = Math.random();
+                x = x * 100;
+                x = x % 6;
+                x = Math.floor(x);
+                ans = document.getElementById("myinput").value;
+                if (ans == x) {
+                    gotit = true;
+                } else {
+                    guesstimes++;
+                }
+            }
+            alert("you guessed "+guesstimes+" times");
+        }
+    </script>
+</body>
+
+</html>

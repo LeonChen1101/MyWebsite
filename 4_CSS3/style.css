@@ -1,0 +1,333 @@
+        body {
+            margin: 0;
+        }
+        /*所有內容置中*/
+        
+        .clear {
+            /**/
+            clear: both;
+        }
+        
+        .fixedwidth {
+            width: 976px;
+            height: 100%;
+            margin: auto;
+        }
+        
+        #topbar {
+            height: 39.5167px;
+            background-color: white;
+            font-family: Arial, Helvetica, freesanz, sans-serif;
+            font-weight: bold;
+            font-size: 13px;
+            color: #333333;
+        }
+        
+        #topbar #bbclogo {
+            float: left;
+            width: 92px;
+            height: 39.5px;
+            border-right: 1px solid #B3AEAE;
+        }
+        
+        #topbar #bbclogo img {
+            padding-top: 8px;
+        }
+        
+        #topbar #signinlogo {
+            float: left;
+            width: 166.05px;
+            height: 39.5px;
+            border-right: 1px solid #B3AEAE;
+        }
+        
+        #topbar #signinlogo p {
+            margin: 11px 2px 0 15px;
+        }
+        
+        #topbar #signinlogo p #signinfont {
+            position: relative;
+            top: -5px;
+            left: 8px;
+        }
+        
+        #topbar #topmenu {
+            height: 39.5px;
+            float: left;
+        }
+        /*margin,padding=0會讓ul與li重疊*/
+        
+        #topbar #topmenu ul {
+            background-color: pink;
+            margin-top: 0;
+            padding: 0;
+        }
+        
+        #topbar #topmenu ul li {
+            float: left;
+            list-style: none;
+            /*文字padding出方框*/
+            padding: 12px 12px 12.5px 12px;
+            border-right: 1px solid #B3AEAE;
+        }
+        
+        #topbar #more {
+            float: left;
+        }
+        
+        #topbar #more p {
+            /*預設非0*/
+            margin: 0;
+            width: 121px;
+            /*文字padding出方框*/
+            padding: 12px 12px 12px 12px;
+            border-right: 1px solid #B3AEAE;
+            ;
+        }
+        
+        #topbar #more p .popdownmenu {
+            float: right;
+            padding-right: 12px;
+        }
+        
+        #topbar #search {
+            float: left;
+            margin-top: 7px;
+            margin-left: 7.5px;
+        }
+        
+        #topbar #search input {
+            width: 180px;
+            height: 24px;
+            border: none;
+            background-color: #E4E4E4;
+            font-family: Arial, Helvetica, freesanz, sans-serif;
+            font-weight: bold;
+            padding-left: 6px;
+            background-image: url("BBCimages/magnify.png");
+            /*background image not repeat*/
+            background-repeat: no-repeat;
+            /*right 4% 表示離右邊4%的距離*/
+            background-position: right 4% center;
+        }
+        
+        #newsbar {
+            height: 56px;
+            background-color: #BB1919;
+            border-top: 1px solid #E5E5E5;
+        }
+        
+        #newsbar img {
+            padding-top: 12px;
+        }
+        
+        #menu1 {
+            height: 36px;
+            background-color: #A91717;
+            font-family: Arial, Helvetica, freesanz, sans-serif;
+            font-size: 14px;
+            color: white;
+        }
+        /*因為Home字體是靠左對齊,所以要跟list分開寫*/
+        
+        #menu1 #home p {
+            float: left;
+            /*這邊如果沒用position,用margin-top=11px,會擠壓到下面的menu*/
+            margin-top: 0px;
+            padding-right: 12px;
+            position: relative;
+            top: 11px;
+            /*-------------------------------------------------------*/
+            border-right: 1px solid #bb4545;
+        }
+        
+        #menu1 ul {
+            float: left;
+            margin: 0;
+            padding: 0;
+            padding-top: 11px;
+        }
+        
+        #menu1 ul li {
+            float: left;
+            list-style: none;
+            padding-left: 12px;
+            padding-right: 12px;
+            border-right: 1px solid #bb4545;
+        }
+        
+        #menu1 #redmore {
+            float: left;
+        }
+        
+        #menu1 #redmore p {
+            float: left;
+            margin: 0;
+            padding: 11px 5px 0 12px;
+        }
+        /*到三角離文字More的距離*/
+        
+        #menu1 #redmore img {
+            position: relative;
+            left: 5px;
+        }
+        
+        #menu2 {
+            height: 35px;
+            background-color: white;
+            font-family: Arial, Helvetica, freesanz, sans-serif;
+            font-size: 14px;
+            color: black;
+        }
+        
+        #menu2 #asia p {
+            float: left;
+            margin-top: 0px;
+            padding-right: 12px;
+            position: relative;
+            top: 6px;
+            border-right: 1px solid #bb4545;
+            font-size: 20px;
+        }
+        
+        #menu2 ul {
+            float: left;
+            margin: 0;
+            padding: 0;
+            padding-top: 11px;
+        }
+        
+        #menu2 ul li {
+            float: left;
+            list-style: none;
+            padding-left: 12px;
+            padding-right: 12px;
+            border-right: 1px solid #bb4545;
+        }
+        
+        #primary {
+            float: left;
+            width: 680px;
+            height: 660px;
+            font-family: Arial, Helvetica, freesanz, sans-serif;
+        }
+        
+        #primary h1 {
+            float: left;
+            color: black;
+        }
+        
+        #primary #pic1 {
+            float: right;
+            margin: 0;
+            padding-right: 15px;
+        }
+        
+        #primary #session1 {
+            float: left;
+            margin: 0;
+            width: 232px;
+            color: #5A5A64;
+        }
+        
+        #primary #session1 #p1 {
+            float: left;
+            width: 232px;
+            font-size: 0.9em;
+            margin: 0;
+        }
+        
+        .clock {
+            float: left;
+            width: 232px;
+            font-size: 0.8em;
+        }
+        
+        .time {
+            font-size: 0.8em;
+            padding-left: 3px;
+            padding-right: 8px;
+            border-right: 1px solid #E5E5E5;
+        }
+        
+        .location {
+            color: #BB1919;
+            font-size: 0.8em;
+            padding-left: 8px;
+        }
+        
+        #primary #session1 .line {
+            float: left;
+            height: 1px;
+            width: 40px;
+            border-bottom: 1px solid #8B5A50;
+        }
+        
+        #primary #session1 .point {
+            color: black;
+            float: left;
+            font-size: 0.8em;
+        }
+        
+        #primary .line2 {
+            height: 1px;
+            float: left;
+            margin-top: 8px;
+            width: 665px;
+            border-bottom: 1px solid #E5E5E5;
+        }
+        
+        #primary .session2 {
+            width: 216px;
+            height: 388px;
+            float: left;
+            margin-top: 16px;
+            /*
+            position: relative;
+            top: 16px;
+            */
+            padding-right: 16px;
+            border-right: 1px solid #E5E5E5;
+        }
+        
+        #primary .session2 h3 {
+            float: left;
+            margin-top: 5px;
+            color: black;
+        }
+        
+        #primary .session2 p {
+            float: left;
+            margin-top: -10px;
+            padding-bottom: 20px;
+            font-size: 0.9em;
+            color: #5A5A64;
+        }
+        /*session's 2*/
+        
+        #primary #se2_2 {
+            padding-left: 16px;
+        }
+        
+        #primary .session3 {
+            float: right;
+            width: 180px;
+        }
+        #primary .session3 p{
+            margin: 0;
+            color: #5A5A64;
+        }
+        .line3 {
+            height: 1px;
+            width: 180px;
+            border-bottom: 1px solid #E5E5E5;
+            margin-top: 60px;
+        }
+        #primary #se3_2 {
+            position: relative;
+            top: -10px 
+        }
+        #primary #se3_3 {
+            position: relative;
+            top: -20px 
+        }

@@ -1,0 +1,202 @@
+<!doctype html>
+<html>
+
+<head>
+    <title>CodePlayer</title>
+
+    <meta charset="utf-8" />
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <script type="text/javascript" src="jquery-3.2.1.min.js"></script>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+    <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css">
+    <style>
+        body {
+            margin: 0px;
+        }
+        
+        .clear {
+            /**/
+            clear: both;
+        }
+        
+        #menubar {
+            width: 100%;
+            height: 40px;
+            background-color: #EDEDED;
+            border-bottom: 1px solid #BFBFBF;
+            font-family: "Myriad set Pro", "Helvetica", "Arial", sans-serif;
+        }
+        
+        #logo {
+            padding-top: 7px;
+            padding-left: 10px;
+            font-size: 1.2em;
+            font-weight: bold;
+        }
+        
+        #buttomdiv {
+            background-color: pink;
+            position: relative;
+            float: right;
+            top: -25px;
+            right: 10px;
+        }
+        
+        #runbutton {
+            font-size: 1.1em;
+        }
+        
+        #toggles {
+            height: 32px;
+            width: 248.5px;
+            margin: auto;
+            list-style: none;
+            border: 1px solid #BFBFBF;
+            border-radius: 5px;
+            position: relative;
+            top: -28px;
+            padding: 0px;
+        }
+        
+        #toggles li {
+            float: left;
+            padding-top: 5px;
+            border-right: 1px solid #BFBFBF;
+            padding-bottom: 9px;
+            padding-right: 13px;
+            padding-left: 13px;
+        }
+        
+        .codeContainer {
+            float: left;
+            position: relative;
+            margin-top: -21px;
+            height: 100%;
+            width: 50%;
+        }
+        
+        .codeContainer textarea {
+            height: 100%;
+            width: 100%;
+            border: none;
+            border-right: 1px solid #BFBFBF;
+            padding-top: 5px;
+            padding-left: 5px;
+            font-size: 1.1em;
+            /*顯示被遮擋得border*/
+            box-sizing: border-box;
+        }
+        
+        .codeLabel {
+            position: absolute;
+            right: 10px;
+            top: 10px;
+            color: #2DBFFF;
+            font-family: "Myriad set Pro", "Helvetica", "Arial", sans-serif;
+        }
+        
+        #CSSContainer,
+        #JSContainer {
+            display: none;
+        }
+        
+        iframe {
+            height: 100%;
+            width: 98%;
+            position: relative;
+            left: 5px;
+            border: none;
+        }
+        
+        .selected {
+            background-color: yellow;
+        }
+        
+        .first {
+            /*左邊選擇顏色圓角修飾*/
+            border-top-left-radius: 5px;
+            border-bottom-left-radius: 5px;
+        }
+        
+        .second {
+            /*右邊選擇顏色圓角修飾*/
+            border-top-right-radius: 5px;
+            border-bottom-right-radius: 5px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="wrapper">
+        <div id="menubar">
+            <div id="logo">
+                CodePlayer
+            </div>
+            <div id="buttomdiv">
+                <button id="runbutton">Run</button>
+            </div>
+            <ul id="toggles">
+                <li class="toggle selected first">HTML</li>
+                <li class="toggle ">CSS</li>
+                <li class="toggle">JS</li>
+                <li class="toggle selected second">Result</li>
+            </ul>
+        </div>
+
+        <div class="clear"></div>
+
+        <div class="codeContainer" id="HTMLContainer">
+            <div class="codeLabel">HTML</div>
+            <textarea id="HTMLcode">Example code</textarea>
+        </div>
+
+        <div class="codeContainer" id="CSSContainer">
+            <div class="codeLabel">CSS</div>
+            <textarea id="CSScode"></textarea>
+        </div>
+
+        <div class="codeContainer" id="JSContainer">
+            <div class="codeLabel">JS</div>
+            <textarea id="JScode"></textarea>
+        </div>
+
+        <div class="codeContainer" id="ResultContainer">
+            <div class="codeLabel">Result</div>
+            <iframe id="ResultFrame"></iframe>
+        </div>
+
+    </div>
+    <script>
+        var windowHeight = $(window).height();
+        var menubarHeight = $("#menubar").height();
+        var codeContainerHeight = windowHeight - menubarHeight;
+        $(".codeContainer").height(codeContainerHeight + "px");
+
+        $(".toggle").click(function () {
+            //當我們選擇toggle,狀態會變成運行selected(把selected的class加到list中)
+            //所以我們要定義selected
+            $(this).toggleClass("selected");
+            //$(this).html()是取得當前的內容
+            var activeDiv = $(this).html();
+            //.toggle()轉換相對應的Container
+            $("#" + activeDiv + "Container").toggle();
+            //用.filter過濾,算出當前有顯示的數量
+            var showingDiv = $(".codeContainer").filter(function () {
+                //邏輯意思即return有顯示的
+                return ($(this).css("display") != "none");
+            }).length;
+            //將我們的Container依數量平均在寬度100%的版面上
+            var width = 100 / showingDiv;
+            $(".codeContainer").css("width", width + "%")
+        });
+
+        $("#runbutton").click(function(){
+            $("iframe").contents().find("html").html("<style>"+$("#CSScode").val()+"</style>"+$("#HTMLcode").val());
+            document.getElementById("ResultFrame").contentWindow.eval($("#JScode").val());
+        });
+
+    </script>
+</body>
+
+</html>

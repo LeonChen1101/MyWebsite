@@ -1,0 +1,66 @@
+
+<!doctype html>
+<html>
+<head>
+    <title>Example Domain</title>
+
+    <meta charset="utf-8" />
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <style type="text/css">
+
+    .box{
+        background-color: pink;
+        height: 200px;
+        width: 200px;
+        margin: 40px auto;
+        padding: 50px;
+        box-sizing: border-box;
+        border-bottom-left-radius: 100px;
+        border-bottom-right-radius: 100px;
+        border-top-right-radius: 100px;
+    }
+    #box1{
+        background: linear-gradient(to bottom right,pink,yellow);
+    }
+    #box2{
+        background: linear-gradient(60deg,blue,orangered);
+    }
+    #box3{
+        background: radial-gradient(black,wheat,orange,purple,gold);
+    }
+    body#colors{
+        background: rgb(25, 52, 84);
+        color: white;
+    }
+    #colors #container{
+        width: 600px;
+        margin: 0px auto;
+        padding: 40px;
+        background:rgba(255, 255, 255,0.5);
+       
+    }
+      #colors #container2{
+        width: 600px;
+        margin: 0px auto;
+        padding: 40px;
+        box-sizing: border-box;
+        background:hsla(255, 255, 0, 0.5);
+       
+    }
+    </style>    
+</head>
+
+<body id="colors">
+    <div id="container">
+        <h1>CSS3 colors</h1>
+        <div class="box" id="box1">this is box with a gradient</div>
+        <div class="box" id="box2">this is box with a gradient</div>
+        <div class="box" id="box3">this is box with a gradient</div>
+    </div>
+    <br />
+    <div id="container2">
+        <h1>CSS3 colors</h1>
+    </div>
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!doctype html>
+<html>
+
+<head>
+    <title>Learing Javascript</title>
+
+    <meta charset="utf-8" />
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    
+</head>
+
+<body>
+    <input id="myinput" type="text" value="test" />
+    <button id="changer">Change the text</button>
+    <div id="mytext">This is some text</div>
+    <div id="circle"></div>
+    <script type="text/javascript">
+        var newText = document.getElementById("myinput").value;
+        document.getElementById("changer").onclick = function () {
+            /*重新取得一次資料*/
+            newText = document.getElementById("myinput").value;
+            document.getElementById("mytext").innerHTML = newText;
+        }
+    </script>
+</body>
+
+</html>

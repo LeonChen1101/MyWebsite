@@ -1,0 +1,695 @@
+
+<!doctype html>
+<html>
+<head>
+    <title>Ken's BBC</title>
+
+    <meta charset="utf-8" />
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <style type="text/css">
+    	
+    	body {
+    		margin:0;
+    	}
+    	
+    	.fixedwidth {
+    		
+    		width:976px;
+    		margin:auto;
+    		
+    	}
+   	
+   		.clear {
+   			clear:both;
+   		}
+   		
+   		#topbar {
+   			color:#222222;
+   			font-family: Arial,Helvetica,freesans,sans-serif;
+   			font-weight:bold;
+   			font-size: 13px;
+   			height:39.5167px;
+   			background-color:white;
+   		}
+   		
+   		#bbclogo {
+   			float:left;
+   			width:92px;
+   			height:39.5167px;
+   			border-right: 1px solid #E5E5E5;
+   		}
+   		
+   		#bbclogo img {
+   			padding-top:8px;
+   		}	
+   		
+   		#signin {
+   			float:left;
+   			width:166px;
+   			height:39.5167px;
+   			border-right: 1px solid #E5E5E5;
+   			
+   		}
+   		
+   		#signin p {
+   			margin:11px 2px 0 15px;
+   			
+   		}
+   		
+   		.signinfont {
+   			position:relative;
+   			top:-3px;
+   			left:8px;
+   		}	
+   		
+   		#topmenu {
+   			float:left;
+   		}
+   		
+   		#topmenu ul {
+   			padding:0;
+   			margin:0;
+   			
+   		}
+   		
+   		#topmenu li {
+   			float:left;
+   			margin:0;
+   			list-style:none;
+   			padding:12px 12px 12px 12px;
+   			border-right: 1px solid #E5E5E5;
+   		}
+   		
+   		#more {
+   			float:left;
+   		}
+   		
+   		#more p {
+   			margin:0;
+   			width:121px;
+   			padding:12px 0 12px 12px;
+   			border-right: 1px solid #E5E5E5;
+   		}
+   		
+   		.popdownmenu {
+   			float:right;
+   			padding-right:12px;
+   		}
+   		
+   		#search {
+   			float:left;
+   			margin-top:7px;
+   			margin-left:7.5px;
+   			
+   		}
+   		
+   		#search input {
+   			width:195px;
+   			height:24px;
+   			color:#222222;
+   			background-color:#E4E4E4;
+   			border:none;
+   			padding-left:6px;
+   			font-family: Arial,Helvetica,freesans,sans-serif;
+   			font-weight:bold;
+   			font-size: 13px;
+   			background-image:url("images/magnify.png");
+   			background-repeat:no-repeat;
+   			background-position:right 4% center;
+   			background-size:8.5%;
+   		}
+   		#newsbar {
+   			height:56px;
+   			background-color:#BB1919;
+   			border-top: 1px solid #E5E5E5;
+   		}
+   		
+   		#newsbar img {
+   			padding-top:12px;
+   		}
+   		
+   		#menu1 {
+   			color:white;
+   			font-family: Arial,Helvetica,freesans,sans-serif;
+   			font-size: 14px;
+   			height:36px;
+   			background-color:#A91717;
+   		}
+   		
+   		#home {
+   			
+   		}
+   		
+   		#home p {
+   			float:left;
+   			margin-top:11px;
+   			padding-right:12px;
+   			list-style:none;
+   			border-right:1px solid #bb4545;
+   		}
+   		#menu1 ul {
+   			float:left;
+   			margin:0;
+   			padding:0;
+   			padding-top:11px;
+   		}
+   		
+   		#menu1 li {
+   			float:left;
+   			padding-left:12px;
+   			padding-right:12px;
+   			list-style:none;
+   			border-right:1px solid #bb4545;
+   		}
+   		
+   		#redmore {
+   			
+   			float:left;
+   		}
+   		
+   		#redmore p {
+   			float:left;
+   			margin:0;
+   			padding:11px 5px 0 12px;
+   		}
+   		
+   		#redmore img {
+   			
+   			position:relative;
+   			top:2px;
+   			left:6px;
+   		}
+   		#menu2 {
+   		   	color:#333333;
+   			font-family: Arial,Helvetica,freesans,sans-serif;
+   			font-size: 20px;
+   			height:35px;
+   			margin:0;
+   			float:left;
+   		}
+   		
+   		#asia {
+   			position:relative;
+   			left:-50.88px;
+   			float:left;
+   			
+   		}
+   		
+   		#asia p {
+   			
+   			margin-top:4px;
+   			padding-right:12px;
+   			
+   		}
+   		
+   		#china {
+   			float:left;
+   			position:relative;
+   			left:-50.88px;
+   			height:31px;
+   			border-bottom:4px solid #BB1919
+   		}
+   		
+   		#china p {
+   			
+   			font-size:14px;
+   			margin-top:9px;
+   			padding-left:12px;
+   			padding-right:12px;
+   			border-left:1px solid #E5E5E5;
+   			border-right:1px solid #E5E5E5;
+   			
+   		}
+   		
+   		#india {
+   			float:left;
+   			position:relative;
+   			left:-50.88px;
+   		}
+   		
+   		#india p {
+   			
+   			font-size:14px;
+   			margin-top:9px;
+   			padding-left:12px;
+   			padding-right:12px;
+   			
+   		}
+   		
+   		#blank {
+   			margin:0 14.5% 0 14.5%;
+   			padding:auto;
+   			float:left;
+   			width:976px;
+   			height:127px;
+   		}
+   		
+   		#primary {
+   			float:left;
+   			margin:0;
+   			margin:0 14.5% 0 14.5%;
+   			font-family: Arial,Helvetica,freesans,sans-serif;
+   			color:#5A5A5A;
+   			width:680px;
+   			height:660.25px;
+   		}
+   		
+   		#primary h1 {
+   			color:black;
+   			float:left;
+   		}
+   		
+   		.pic1 {
+   			float:right;
+   			padding-right:15px;
+   		}
+   		
+   		.session1 {
+   			margin:0;
+   			width:232px;
+   			float:left;
+   			
+   		}
+   		
+   		.width1 {
+   			float:left;
+   			width:232px;
+   			font-size:0.9em;
+   		}
+   		
+   		.time {
+   			
+   			width:232px;
+   			font-size:0.8em;
+   		}
+   		
+   		.left {
+   			padding-left:3px;
+   			padding-right:8px;
+   			border-right:1px solid #E5E5E5;
+   		}
+   		
+   		.right {
+   			
+   			padding-left:3px;
+   		}
+   		
+   		.session2 {
+   			color:black;
+   		}
+   		
+   		.line1 {
+   			margin:0;
+   			height:1px;
+   			width:40px;
+   			float:left;
+   			border-bottom:1px solid #8B5A50;
+   		}
+   		
+   		#session3 {
+   			float:left;
+   			margin:0;
+   			position:relative;
+   			top:-5px;
+   		}
+   		
+   		.line2 {
+   			margin-top:8px;
+   			height:1px;
+   			width:665px;
+   			float:left;
+   			border-bottom:1px solid #E5E5E5;
+   		}
+   		
+   		.session4 {
+   			float:left;
+   			width:216px;
+   			height:388px;
+   			position:relative;
+   			top:16px;
+   			padding-right:16px;
+   			border-right:1px solid #E5E5E5;
+   		}
+   		
+   		.session4 h3 {
+   			color:#5A5A5A;
+   			float:left;
+   			margin-top:5px;
+   			
+   		}
+   		
+   		.session4 p {
+   			float:left;
+   			margin-top:-10px;
+   			padding:0;
+   			font-size:0.9em;
+   			
+   		}
+   		
+   		.distance {
+   			float:left;
+   			position:relative;
+   			top:5px;
+   			
+   		}
+   		
+   		.session5 {
+   			float:left;
+   			width:216px;
+   			height:388px;
+   			position:relative;
+   			top:16px;
+   			padding-left:16px;
+   			padding-right:16px;
+   			border-right:1px solid #E5E5E5;
+   			
+   		}
+   		
+   		.session5 h3 {
+   			color:black;
+   			float:left;
+   			margin-top:5px;
+   			
+   		}
+   		
+   		.session5 p {
+   			float:left;
+   			margin-top:-10px;
+   			padding:0;
+   			font-size:0.9em;
+   			
+   		}
+   		
+   		#session6 {
+   			float:right;
+   			width:165px;
+   			height:388px;
+   			position:relative;
+   			top:16px;
+   			padding-left:16px;
+   			padding-right:16px;
+   			
+   			
+   		}
+   		
+   		.oldnews h3 {
+   			margin:0;
+   			padding:0;
+   			color:black;
+   			
+   		}
+   		
+   		.oldnews p {
+   			font-size:0.85em;
+   		}
+   		
+   		.oldnewsline {
+   			margin-top:21px;
+   			height:1px;
+   			width:165px;
+   			float:left;
+   			border-bottom:1px solid #E5E5E5;
+   		}
+   		
+   		#endline {
+   			
+   			margin-top:35px;
+   			height:1px;
+   			width:665px;
+   			float:left;
+   			border-bottom:1px solid #E5E5E5;
+   		}
+   		
+   		#endblank {
+   			margin:0 14.5% 0 14.5%;
+   			padding:auto;
+   			float:left;
+   			width:976px;
+   			height:127px;
+   		}
+   		
+    </style>    
+</head>
+
+<body>
+	<div id="container">
+		
+		<div id="topbar">
+		
+			<div class="fixedwidth">
+				
+				<div id="bbclogo">
+				
+					<img src="images/bbclogo.png" width=84px />
+					
+				</div>
+				
+				<div id="signin">
+				
+					<p><img src="images/signin.png" width=19.99px /><span class="signinfont">Sign in</span></p>
+					
+				</div>
+				
+				<div id="topmenu">
+					
+					<ul>
+					
+						<li>News</li>
+						<li>Sport</li>
+						<li>Weather</li>
+						<li>Shop</li>
+						<li>Earth</li>
+						<li>Travel</li>
+						
+					<ul>
+					
+				</div>
+				
+				<div id="more">
+					
+					<p>More<span class="popdownmenu"><img src="images/popdownmenu.png" width=6px /></span></p>
+				
+				</div>
+				
+				<div id="search">
+					
+					<input type="text" placeholder="Search" / >
+					
+				</div>
+				
+			</div>
+			
+		</div>
+		
+		
+		<div id="newsbar">
+		
+			<div class="fixedwidth">
+				
+				<img src="images/news.svg" / >
+				
+			</div>
+		
+		</div>
+		
+		<div id="menu1">
+			
+			<div class="fixedwidth">
+			
+				<div id="home">
+				
+					<p>Home</p>
+					
+				</div>
+				
+				<ul>
+					
+					<li>Video</li>
+					<li>World</li>
+					<li>US & Canada</li>
+					<li>UK</li>
+					<li>Business</li>
+					<li>Tech</li>
+					<li>Science</li>
+					<li>Magazine</li>
+					<li>Entertainment & Arts</li>
+					<li>Health</li>
+					
+				</ul>
+				
+				<div id="redmore">
+				
+					<p>More<img src="images/redmore.png" width=8px / ></p>
+					
+				</div>
+				
+			</div>
+		
+		</div>
+		
+		<div id="menu2">
+			
+			<div class="fixedwidth">
+			
+				<div id="asia">
+					
+					<p>Asia</p>
+					
+				</div>
+				
+				<div id="china">
+					
+					<p>China</p>
+					
+				</div>
+				
+				<div id="india">
+					
+					<p>India</p>
+					
+				</div>
+				
+			</div>
+			
+			
+		
+		</div>
+
+		<div id="blank" class="fixedwidth"></div>
+		
+		<div>
+		
+			<div  id="primary" class="fixedwidth">
+			
+				<h1>China briefly detains rights lawyer</h1>
+				
+				<div class="clear"></div>
+				
+				<div class="pic1">
+				
+					<img src="images/pic1.png" width=400px/>
+					
+				</div>
+				
+				<div class="session1">
+					
+					<p class="session1 width1">Police in China briefly detain human rights lawyer Ge YongXi over social media posts he made about China's leaders and the leaked Panama Papers.</p>
+									
+					<div class="clear"></div>
+		
+					<p class="time"><img src="images/clock.png" width=12px/><span class="left"> 9 hour ago</span><span class="right"> China</span></p>
+
+					<div class="line1"/></div>
+				
+					<div class="width1 session2">
+					
+					<p id="session3"><br><img src="images/play.png" width=14px/> Concern for China human rights lawyers</p>
+					
+					<p><img src="images/play.png" width=14px/> Where are China's missing lawyers?</p>
+					
+					<p>What is China accused of?</p>
+				
+					</div>
+					
+					<div class="clear"></div>
+				
+					<div class="line2"/></div>
+							
+				</div>
+				
+				<div class="clear"></div>
+				
+				<div class="session4">
+				
+					<div>
+						
+						<img src="images/pic2.png" width=216px />
+						
+					</div>
+					
+					<div >
+					
+						<h3>'No sham marriages'</h3>
+					
+					</div>
+					
+					<div>
+						
+						<p>A social media campaign takes off among China's LGBT community which sees them pledging not to enter into sham marriages with straight people.</p>
+						
+						<div class="clear"></div>
+		
+						<p class="distance"><img src="images/clock.png" width=12px/><span class="left"> 14 April 2016</span><span class="right"> China</span></p>
+
+					</div>
+					
+				</div>
+				
+				<div class="session5">
+					
+					<div>
+						
+						<img src="images/pic3.png" width=216px />
+						
+					</div>
+					
+					<div >
+					
+						<h3>China's economic growth slows to 6.7%</h3>
+					
+					</div>
+					
+					<div>
+						
+						<p>China's economy grew at an annual rate of 6.7% in the first quarter of 2016,official data shows,the slowest quarterly growth in seven years.</p>
+						
+						<div class="clear"></div>
+						
+						
+						<p class="distance"><img src="images/clock.png" width=12px/><span class="left"> 15 April 2016</span><span class="right"> Business</span></p>
+
+					</div>
+					
+				</div>	
+				
+				<div id="session6" class="oldnews">
+				
+						<h3>China's transition:<br>What transition?</h3>
+						
+						<div class="clear"></div>
+		
+						<p><img src="images/clock.png" width=12px/><span class="left"> 15 April 2016</span><span class="right"> Business</span></p>
+						
+						<div class="oldnewsline"></div>
+					
+						<h3 class="distance">Hong Kong teen<br>'ran Australia drug ring'</h3>
+						
+						<div class="clear"></div>
+		
+						<p><img src="images/clock.png" width=12px/><span class="left"> 15 April 2016</span><span class="right"> Australia</span></p>
+						
+						<div class="oldnewsline"></div>
+						
+						<h3 class="distance">Hong Kong Tiananmen museum to close</h3>
+						
+						<div class="clear"></div>
+		
+						<p><img src="images/clock.png" width=12px/><span class="left"> 14 April 2016</span><span class="right"> China</span></p>
+						
+				
+				</div>
+				
+			<div id="endline"></div>
+			
+			
+			<div id="endblank"></div>
+				
+			
+			</div>
+			
+		</div>
+		
+	</div>
+</body>
+</html>
